@@ -32,6 +32,10 @@ gem 'autoprefixer-rails'
 gem "font-awesome-rails"
 gem 'bootswatch-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'momentjs-rails'
+
+gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'https://github.com/zpaulovics/datetimepicker-rails'
+
 
 gem 'devise'
 

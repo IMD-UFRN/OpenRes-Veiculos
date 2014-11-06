@@ -12,6 +12,77 @@
   <% end %>
 
 
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :date, as: :date_picker  %>
+      <%= f.input :begin_time, as: :time_picker %>
+      <%= f.input :end_time, as: :time_picker  %>
+      <%= f.association :vehicle %>
+      <%= f.input :reason %>
+    </div>
+
+    <div class="col-md-8">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Detalhes do Veículo
+        </div>
+        <div class="panel-body">
+          <p>
+            <strong>Data:</strong> 11/11/2014
+          </p>
+          <h3>Usuários responsáveis</h3>
+          <div class="list-group">
+            <a href="#" class="list-group-item">João Mourão <span class="pull-right">
+
+            joao@example.com</span></a>
+            <a href="#" class="list-group-item">Maria Zacaria <span class="pull-right">joao@example.com</span></a>
+            <a href="#" class="list-group-item">Mike Spike <span class="pull-right">joao@example.com</span></a>
+            <a href="#" class="list-group-item">John Doe <span class="pull-right">joao@example.com</span></a>
+          </div>
+
+          <h3>Reservas Marcadas para este dia</h3>
+
+
+          <table class="table table-striped table-bordered table-hover ">
+            <thead>
+              <tr>
+                <th>Início</th>
+                <th>Fim</th>
+                <th>Requisitor</th>
+                <th>Motivo</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  10:15
+                </td>
+                <td>
+                  12:15
+                </td>
+                <td>
+                  <a href="#">Zé Lelé</a>
+                </td>
+                <td>
+                  Então me leva pra me dar um rolé
+                </td>
+                <td>
+                  Pendente
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <%= f.button :submit, "OK", class:"btn btn-success" %>
 
 <% end %>

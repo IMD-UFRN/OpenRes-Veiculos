@@ -14,5 +14,29 @@
 //= require jquery_ujs
 //= require angular.min
 //= require bootstrap
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require moment.min
+//= require moment/pt-br.js
+//= require bootstrap-datetimepicker
+//= require pickers
 //= require_tree .
+
+var ready = function() {
+  $('.datetimepicker').datetimepicker({
+    pickSeconds: false
+  });
+
+  $('.timepicker').datetimepicker({
+    pickDate: false,
+    pickSeconds: false
+  });
+
+  $('.datepicker').datetimepicker({
+    pickTime: false
+  });
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
