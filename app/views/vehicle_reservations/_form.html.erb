@@ -1,0 +1,19 @@
+<%= simple_form_for(@vehicle_reservation) do |f| %>
+  <% if @vehicle_reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vehicle_reservation.errors.count, "error") %> prohibited this vehicle_reservation from being saved:</h2>
+
+      <ul>
+      <% @vehicle_reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= f.button :submit, "OK", class:"btn btn-success" %>
+
+<% end %>
+
+<hr>

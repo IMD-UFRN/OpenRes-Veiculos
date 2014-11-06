@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class CarReservationsControllerTest < ActionController::TestCase
+class VehicleReservationsControllerTest < ActionController::TestCase
   setup do
-    @car_reservation = car_reservations(:one)
+    @vehicle_reservation = vehicle_reservations(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:car_reservations)
+    assert_not_nil assigns(:vehicle_reservations)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class CarReservationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create car_reservation" do
-    assert_difference('CarReservation.count') do
-      post :create, car_reservation: {  }
+  test "should create vehicle_reservation" do
+    assert_difference('VehicleReservations.count') do
+      post :create, vehicle_reservation: {  }
     end
 
-    assert_redirected_to car_reservation_path(assigns(:car_reservation))
+    assert_redirected_to vehicle_reservation_path(assigns(:vehicle_reservation))
   end
 
-  test "should show car_reservation" do
-    get :show, id: @car_reservation
+  test "should show vehicle_reservation" do
+    get :show, id: @vehicle_reservation
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @car_reservation
+    get :edit, id: @vehicle_reservation
     assert_response :success
   end
 
-  test "should update car_reservation" do
-    patch :update, id: @car_reservation, car_reservation: {  }
-    assert_redirected_to car_reservation_path(assigns(:car_reservation))
+  test "should update vehicle_reservation" do
+    patch :update, id: @vehicle_reservation, vehicle_reservation: {  }
+    assert_redirected_to vehicle_reservation_path(assigns(:vehicle_reservation))
   end
 
-  test "should destroy car_reservation" do
-    assert_difference('CarReservation.count', -1) do
-      delete :destroy, id: @car_reservation
+  test "should destroy vehicle_reservation" do
+    assert_difference('VehicleReservations.count', -1) do
+      delete :destroy, id: @vehicle_reservation
     end
 
-    assert_redirected_to car_reservations_path
+    assert_redirected_to vehicle_reservations_path
   end
 end

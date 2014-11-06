@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class CarReservationsHelperTest < ActionView::TestCase
+class VehicleReservationsHelperTest < ActionView::TestCase
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class VehicleReservationsTest < ActiveSupport::TestCase
+class VehicleTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
