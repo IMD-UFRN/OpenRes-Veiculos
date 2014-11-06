@@ -36,6 +36,7 @@ gem 'momentjs-rails'
 
 gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'https://github.com/zpaulovics/datetimepicker-rails'
 
+gem 'chosen-rails'
 
 gem 'devise'
 
