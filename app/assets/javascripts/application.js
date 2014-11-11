@@ -22,6 +22,7 @@
 //= require pickers
 //= require chosen-jquery
 //= require_tree .
+//= require chosen-jquery
 
 var ready = function() {
   $('.datetimepicker').datetimepicker({
@@ -36,7 +37,7 @@ var ready = function() {
   $('.datepicker').datetimepicker({
     pickTime: false
   });
-  
+
   $('.chosen-select').chosen({
       allow_single_deselect: true,
       width: "300px",
