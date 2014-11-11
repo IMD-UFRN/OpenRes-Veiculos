@@ -1,4 +1,5 @@
 pt-BR:
+  pending: "Pendente"
   date:
     abbr_day_names:
     - Dom

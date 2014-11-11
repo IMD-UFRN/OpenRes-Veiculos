@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :vehicle_reservations
   resources :vehicles
 
+  get '/vehicles/:id/reservations', to: 'vehicles#get_reservations', as: :get_vehicle_reservations
+
   root "vehicle_reservations#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

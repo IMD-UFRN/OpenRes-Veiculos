@@ -37,6 +37,10 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def get_reservations
+    @reservations = VehicleReservationDecorator.decorate_collection(VehicleReservation.where(vehicle_id: params[:id]))
+  end
+
   # PATCH/PUT /vehicles/1
   # PATCH/PUT /vehicles/1.json
   def update

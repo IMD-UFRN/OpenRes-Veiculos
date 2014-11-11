@@ -40,6 +40,10 @@ class VehicleReservationDecorator < Draper::Decorator
     object.has_conflicts? ? "Sim" : "Não"
   end
 
+  def status
+    I18n.t(object.status)
+  end
+
   def responsible
     "ME IMPLEMENTE"
   end

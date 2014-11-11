@@ -12,12 +12,12 @@
   <% end %>
 
 
-  <div class="row">
+  <div class="row" ng-controller="CarReservationsCtrl">
     <div class="col-md-4">
       <%= f.input :date, as: :date_picker  %>
       <%= f.input :begin_time, as: :time_picker %>
       <%= f.input :end_time, as: :time_picker  %>
-      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", data: { placeholder: "Selecione um veículo" }} %>
+      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "selected", data: { placeholder: "Selecione um veículo" }} %>
       <%= f.input :reason %>
 
       <%= f.button :submit, "OK", class:"btn btn-success" %>
@@ -58,21 +58,21 @@
             </thead>
 
             <tbody>
-              <tr>
+              <tr ng-repeat="reservation in preview.reservations">
                 <td>
-                  10:15
+                  {{reservation.begin_time}}
                 </td>
                 <td>
-                  12:15
+                  {{reservation.end_time}}
                 </td>
                 <td>
-                  <a href="#">Zé Lelé</a>
+                  {{reservation.responsible}}
                 </td>
                 <td>
-                  Então me leva pra me dar um rolé
+                  {{reservation.reason}}
                 </td>
                 <td>
-                  Pendente
+                  {{reservation.status}}
                 </td>
               </tr>
 
