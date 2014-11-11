@@ -14,35 +14,20 @@
 //= require jquery_ujs
 //= require angular.min
 //= require bootstrap
-//= require bootstrap-sprockets
+//= require chosen-jquery
 //= require turbolinks
 //= require moment.min
 //= require moment/pt-br.js
 //= require bootstrap-datetimepicker
 //= require pickers
-//= require chosen-jquery
 //= require_tree .
-//= require chosen-jquery
 
 var ready = function() {
-  $('.datetimepicker').datetimepicker({
-    pickSeconds: false
-  });
-
-  $('.timepicker').datetimepicker({
-    pickDate: false,
-    pickSeconds: false
-  });
-
-  $('.datepicker').datetimepicker({
-    pickTime: false
-  });
-
   $('.chosen-select').chosen({
-      allow_single_deselect: true,
-      width: "300px",
-      no_results_text: 'Nenhum resultado para'
-    });
+    allow_single_deselect: true,
+    width: "300px",
+    no_results_text: 'Nenhum resultado para'
+  });
 
 };
 
