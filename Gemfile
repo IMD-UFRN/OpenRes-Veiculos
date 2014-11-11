@@ -42,6 +42,8 @@ gem 'devise'
 
 gem 'simple_form'
 
+gem 'draper'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
