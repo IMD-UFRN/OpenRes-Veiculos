@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require angular.min
 //= require bootstrap
-//= require chosen-jquery
 //= require turbolinks
+//= require chosen-jquery
 //= require moment.min
 //= require moment/pt-br.js
 //= require bootstrap-datetimepicker

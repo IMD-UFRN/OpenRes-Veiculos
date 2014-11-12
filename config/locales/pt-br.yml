@@ -1,5 +1,7 @@
 pt-BR:
   pending: "Pendente"
+  approved: "Aprovada"
+  rejected: "Rejeitada"
   date:
     abbr_day_names:
     - Dom
@@ -220,4 +222,5 @@ pt-BR:
         begin_time: Início
         end_time: Fim
         vehicle: Veículo
+        driver: Motorista
         reason: Motivo

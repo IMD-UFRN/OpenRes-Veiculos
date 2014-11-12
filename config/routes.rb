@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :vehicle_reservations
   resources :vehicles
+  resources :drivers
 
   get '/vehicles/:id/reservations', to: 'vehicles#get_reservations', as: :get_vehicle_reservations
 

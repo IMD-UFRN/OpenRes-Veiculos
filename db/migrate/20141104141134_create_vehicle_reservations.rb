@@ -10,6 +10,7 @@ class CreateVehicleReservations < ActiveRecord::Migration
       t.text :reason
       t.references :user, index: true
       t.references :vehicle, index: true
+      t.references :driver, index: true
 
       t.timestamps
     end

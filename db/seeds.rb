@@ -8,3 +8,4 @@
 
 Vehicle.create(plate: "MYL-6222", car_model: "Doblo")
 Vehicle.create(plate: "MNL-6423", car_model: "L200")
+Driver.create(name: "João")

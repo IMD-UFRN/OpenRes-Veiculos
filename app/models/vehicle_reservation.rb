@@ -1,6 +1,9 @@
 class VehicleReservation < ActiveRecord::Base
 
   belongs_to :vehicle
+  belongs_to :driver
+
+  validates_presence_of :driver, :vehicle, :date, :begin_time, :end_time, :reason
 
   before_create do |obj|
 
