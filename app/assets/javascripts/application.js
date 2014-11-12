@@ -19,18 +19,6 @@
 //= require moment.min
 //= require moment/pt-br.js
 //= require bootstrap-datetimepicker
+//= require onload
 //= require pickers
 //= require_tree .
-
-var ready = function() {
-  $('.chosen-select').chosen({
-    allow_single_deselect: true,
-    width: "300px",
-    no_results_text: 'Nenhum resultado para'
-  });
-
-};
-
-
-$(document).ready(ready);
-$(document).on('page:load', ready);

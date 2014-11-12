@@ -1,13 +1,11 @@
-var OpenResVeiculosApp = angular.module('OpenResVeiculosApp', []);
-
 OpenResVeiculosApp.controller('CarReservationsCtrl', function ($scope, $http) {
   $scope.preview = {};
 
+  $scope.date_selected = moment().format("D/M/YYYY");
+
   $scope.updatePreview = function(){
 
-    console.log($scope.selected);
-
-    $http.get('/vehicles/'+$scope.selected+'/reservations.json')
+    $http.get('/vehicles/'+$scope.vehicle+'/reservations.json')
       .success(function(data) {
         $scope.preview = data;
         console.log(data);
@@ -16,4 +14,5 @@ OpenResVeiculosApp.controller('CarReservationsCtrl', function ($scope, $http) {
         console.log('Error: ' + data);
       });
   }
+
 })

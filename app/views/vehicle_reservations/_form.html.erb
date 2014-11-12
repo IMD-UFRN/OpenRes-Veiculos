@@ -17,8 +17,8 @@
       <%= f.input :date, as: :date_picker  %>
       <%= f.input :begin_time, as: :time_picker %>
       <%= f.input :end_time, as: :time_picker  %>
-      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "selected", data: { placeholder: "Selecione um veículo" }} %>
-      <%= f.association :driver, label_method: :name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "selected", data: { placeholder: "Selecione um motorista" }} %>
+      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "vehicle", data: { placeholder: "Selecione um veículo" }} %>
+      <%= f.association :driver, label_method: :name, input_html: {class: "chosen-select", data: { placeholder: "Selecione um motorista" }} %>
       <%= f.input :reason %>
 
       <%= f.button :submit, "OK", class:"btn btn-success" %>
@@ -32,7 +32,7 @@
         </div>
         <div class="panel-body">
           <p>
-            <strong>Data:</strong> 11/11/2014
+            <strong>Data:</strong> {{date_selected}}
           </p>
           <h3>Usuários responsáveis</h3>
           <div class="list-group">
@@ -53,6 +53,7 @@
                 <th>Início</th>
                 <th>Fim</th>
                 <th>Requisitor</th>
+                <th>Motorista</th>
                 <th>Motivo</th>
                 <th>Situação</th>
               </tr>
@@ -68,6 +69,9 @@
                 </td>
                 <td>
                   {{reservation.responsible}}
+                </td>
+                <td>
+                  {{reservation.driver}}
                 </td>
                 <td>
                   {{reservation.reason}}

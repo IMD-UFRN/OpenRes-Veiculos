@@ -4,7 +4,9 @@ class CreateVehicles < ActiveRecord::Migration
 
       t.string :plate
       t.string :car_model
-      
+      t.string :description
+      t.integer :capacity
+
       t.timestamps
     end
   end

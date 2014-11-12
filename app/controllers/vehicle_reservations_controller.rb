@@ -75,6 +75,6 @@ class VehicleReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_reservation_params
-      params[:vehicle_reservation].permit(:date, :begin_time, :end_time, :vehicle_id, :reason, :passengers)
+      params[:vehicle_reservation].permit(:date, :begin_time, :end_time, :vehicle_id, :reason, :passengers, :driver_id)
     end
 end
