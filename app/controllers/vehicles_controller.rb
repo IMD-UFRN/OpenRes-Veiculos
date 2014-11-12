@@ -38,7 +38,9 @@ class VehiclesController < ApplicationController
   end
 
   def get_reservations
-    @reservations = VehicleReservationDecorator.decorate_collection(VehicleReservation.where(vehicle_id: params[:id]))
+    date = Date.strptime(params[:date], '%d/%m/%Y')
+
+    @reservations = VehicleReservationDecorator.decorate_collection(VehicleReservation.where(vehicle_id: params[:id], date: date))
   end
 
   # PATCH/PUT /vehicles/1
