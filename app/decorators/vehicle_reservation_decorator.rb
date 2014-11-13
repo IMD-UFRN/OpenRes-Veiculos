@@ -20,6 +20,10 @@ class VehicleReservationDecorator < Draper::Decorator
     link_to icon("ban") + " Rejeitar", object, class: "btn btn-normal btn-sm"
   end
 
+  def cancel_link
+    link_to icon("close") + " Cancelar", object, class: "btn btn-normal btn-sm"
+  end
+
   def date
     object.date.strftime("%d/%m/%Y")
   end

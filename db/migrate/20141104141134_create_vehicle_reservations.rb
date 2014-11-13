@@ -8,6 +8,7 @@ class CreateVehicleReservations < ActiveRecord::Migration
       t.string :status
       t.string :responsible
       t.text :reason
+      t.text :passengers
       t.references :user, index: true
       t.references :vehicle, index: true
       t.references :driver, index: true

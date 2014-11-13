@@ -1,4 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<%= link_to 'Edit', edit_vehicle_reservation_path(@vehicle_reservation) %> |
-<%= link_to 'Back', vehicle_reservations_path %>
+  <div class="col-md-8 col-xs-12">
+    <h1>Detalhes da Reserva de Veículo</strong></h1>
+  </div>
+
+</div>
+
+<%= @vehicle_reservation.approve_link%>
+<%= @vehicle_reservation.suspend_link%>
+<%= @vehicle_reservation.reject_link%>
+<%= @vehicle_reservation.cancel_link%>
+
+
+<h3>Dados Gerais</h3>
+<p>
+  <strong>Data:</strong> <%= @vehicle_reservation.date%>
+</p>
+<p>
+  <strong>Início:</strong> <%= @vehicle_reservation.begin_time%>
+</p>
+<p>
+  <strong>Início:</strong> <%= @vehicle_reservation.end_time%>
+</p>
+<p>
+  <strong>Veículo:</strong> <%= @vehicle_reservation.vehicle%>
+</p>
+<p>
+  <strong>Motivo:</strong> <%= @vehicle_reservation.reason %>
+</p>
+<p>
+  <strong>Participantes:</strong> <%= @vehicle_reservation.passengers %>
+</p>
+
+
+<hr>
