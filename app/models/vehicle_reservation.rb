@@ -16,6 +16,10 @@ class VehicleReservation < ActiveRecord::Base
 
   end
 
+  scope :approved, lambda{
+    return VehicleReservation.where(status: 'approved')
+  }
+
   scope :conflicting, lambda { |reservation|
     reservations = VehicleReservation.where("vehicle_id = ? and date = ? and id <> ? and status <> ? and status <> ?", reservation.vehicle_id, reservation.date, reservation.id, "rejected", "canceled")
 

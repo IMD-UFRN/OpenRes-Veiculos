@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   root "vehicle_reservations#index"
 
+  post "vehicle_reservations/:id/approve", to: "vehicle_reservation_approval#approve", as: :vehicle_reservation_approve
+  get "vehicle_reservations/:id/reject" => 'vehicle_reservation_approval#justify_status', as: :justify_reject
+  get "vehicle_reservations/:id/suspend" => 'vehicle_reservation_approval#justify_status', as: :justify_suspend
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

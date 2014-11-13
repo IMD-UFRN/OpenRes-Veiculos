@@ -4,13 +4,14 @@ class VehicleReservationsController < ApplicationController
   # GET /vehicle_reservations
   # GET /vehicle_reservations.json
   def index
-    @vehicle_reservations = VehicleReservation.all
 
     pending_reservations = VehicleReservation.where(status: "pending")
-    @approved_reservations = []
-    @rejected_reservations = []
+    approved_reservations = VehicleReservation.where(status: "approved")
+    rejected_reservations = VehicleReservation.where(status: "rejected")
 
     @pending_reservations = VehicleReservationDecorator.decorate_collection(pending_reservations)
+    @approved_reservations = VehicleReservationDecorator.decorate_collection(approved_reservations)
+    @rejected_reservations = VehicleReservationDecorator.decorate_collection(rejected_reservations)
   end
 
   # GET /vehicle_reservations/1

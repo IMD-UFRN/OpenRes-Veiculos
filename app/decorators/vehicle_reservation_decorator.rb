@@ -9,7 +9,7 @@ class VehicleReservationDecorator < Draper::Decorator
   end
 
   def approve_link
-    link_to icon("check-square-o") + " Aprovar", object, class: "btn btn-normal btn-sm"
+    link_to icon("check-square-o") + " Aprovar", vehicle_reservation_approve_path(object.id), class: "btn btn-normal btn-sm", method: "post"
   end
 
   def suspend_link
