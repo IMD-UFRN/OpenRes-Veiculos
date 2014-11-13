@@ -11,13 +11,14 @@
     </div>
   <% end %>
 
+  <%= params[:vehicle_id] %>
 
   <div class="row" ng-controller="CarReservationsCtrl">
     <div class="col-md-4">
       <%= f.input :date, as: :date_picker  %>
       <%= f.input :begin_time, as: :time_picker %>
       <%= f.input :end_time, as: :time_picker  %>
-      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "vehicle", data: { placeholder: "Selecione um veículo" }} %>
+      <%= f.association :vehicle, label_method: :full_name, input_html: {class: "chosen-select", "ng-change"=> "updatePreview()", "ng-model"=> "vehicle", value: params[:vehicle_id].to_i, data: { placeholder: "Selecione um veículo" }} %>
       <%= f.association :driver, label_method: :name, input_html: {class: "chosen-select", data: { placeholder: "Selecione um motorista" }} %>
       <%= f.input :reason %>
 
@@ -36,12 +37,9 @@
           </p>
           <h3>Usuários responsáveis</h3>
           <div class="list-group">
-            <a href="#" class="list-group-item">João Mourão <span class="pull-right">
-
-            joao@example.com</span></a>
-            <a href="#" class="list-group-item">Maria Zacaria <span class="pull-right">joao@example.com</span></a>
-            <a href="#" class="list-group-item">Mike Spike <span class="pull-right">joao@example.com</span></a>
-            <a href="#" class="list-group-item">John Doe <span class="pull-right">joao@example.com</span></a>
+            <a href="#" class="list-group-item">Sergio Eduardo Medeiros<span class="pull-right">
+sergio@imd.ufrn.br</span></a>
+            <a href="#" class="list-group-item">Aldo Nascimento<span class="pull-right">aldo.nascimento@imd.ufrn.br</span></a>
           </div>
 
           <h3>Reservas Marcadas para este dia</h3>
