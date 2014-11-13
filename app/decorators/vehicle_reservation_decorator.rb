@@ -13,11 +13,11 @@ class VehicleReservationDecorator < Draper::Decorator
   end
 
   def suspend_link
-    link_to icon("exclamation-circle") + " Suspender", object, class: "btn btn-normal btn-sm"
+    link_to icon("exclamation-circle") + " Suspender", justify_suspend_path(object), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-normal btn-sm"}
   end
 
   def reject_link
-    link_to icon("ban") + " Rejeitar", object, class: "btn btn-normal btn-sm"
+    link_to icon("ban") + " Rejeitar", justify_reject_path(object), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-normal btn-sm"}
   end
 
   def cancel_link

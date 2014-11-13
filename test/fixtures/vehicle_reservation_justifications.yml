@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reason: MyText
+  vehicle_reservation_id: 
+
+two:
+  reason: MyText
+  vehicle_reservation_id: 

@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get "vehicle_reservations/:id/reject" => 'vehicle_reservation_approval#justify_status', as: :justify_reject
   get "vehicle_reservations/:id/suspend" => 'vehicle_reservation_approval#justify_status', as: :justify_suspend
 
+  post "vehicle_reservations/:id/reject", to: "vehicle_reservation_approval#reject", as: :vehicle_reservation_reject
+  post "vehicle_reservations/:id/suspend", to: "vehicle_reservation_approval#suspend", as: :vehicle_reservation_suspend
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

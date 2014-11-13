@@ -20,7 +20,7 @@
   <strong>Início:</strong> <%= @vehicle_reservation.begin_time%>
 </p>
 <p>
-  <strong>Início:</strong> <%= @vehicle_reservation.end_time%>
+  <strong>Fim:</strong> <%= @vehicle_reservation.end_time%>
 </p>
 <p>
   <strong>Veículo:</strong> <%= @vehicle_reservation.vehicle%>
@@ -34,3 +34,10 @@
 
 
 <hr>
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content" id="modal-window">
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

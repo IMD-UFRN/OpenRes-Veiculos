@@ -85,9 +85,8 @@
               <td><%= reservation.date %></td>
               <td><%= reservation.begin_time %></td>
               <td><%= reservation.end_time %></td>
-              <td><%= reservation.place %></td>
               <td><%= reservation.has_conflicts? %></td>
-              <td><%= reservation.justification.reason %></td>
+              <td><%= reservation.vehicle_reservation_justification.reason %></td>
               <td>
                 <%= reservation.details_link %>
                 <%= reservation.cancel_link %>
@@ -108,3 +107,10 @@
   <br>
   <br>
 <%end%>
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content" id="modal-window">
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
